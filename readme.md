@@ -61,3 +61,4 @@ For adding/editing a room within the selected property. Fields: name, size.
 
 **Bonus Points** <br>
 - tests
+- Using typescript
