@@ -1,4 +1,4 @@
-# Unilinkers - A simple Property management sytem ( PMS )
+# Unilinkers - A simple Property management sytem
 
 ### Objective: 
 Create a simple web application where a user can manage properties and the rooms within those properties.
