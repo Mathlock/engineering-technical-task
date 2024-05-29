@@ -1,64 +1,50 @@
-# Unilinkers - A simple Property management sytem
+# Unilinkers - A Simple Property Management System
 
-### Objective: 
-Create a simple web application where a user can manage properties and the rooms within those properties.
+### Objective
+Develop a simple PMS using Laravel and Javascript to perform CRUD operations for properties and rooms via API routes.
 
-## Backend:
-1. Laravel Setup:
+We recommend spending no more than 3 hours on this task. 
 
-Set up a new Laravel project.
-Use migrations to create a database schema.
+Don't worry if you don't get time to complete it, this is purely to assess your technical knowledge.
 
-2. Schemas:
+### Backend Requirements
+Your API should include the following routes:
 
-**properties**
-properties table with columns: id, name, address, created_at, updated_at.
+#### Properties
+GET: /api/properties -> *returns a list of all properties*
 
-**rooms**
-rooms table with columns: id, property_id, name, size (in sq ft or sq m), created_at, updated_at.
+GET: /api/properties/{property} -> *returns a specific property*
 
-3. API Endpoints:
+POST: /api/properties -> *creates a new property*
 
-POST /api/property - Create a new property.
+PUT: /api/properties/{property} -> *updates an existing property*
 
-GET /api/property - Fetch all properties.
+DELETE: /api/properties/{property} -> *deletes a property*
 
-PUT /api/property/{id} - Edit a specific property.
+#### Rooms
+GET: /api/rooms -> *returns a list of all rooms*
 
-DELETE /api/property/{id} - Delete a specific property.
+GET: /api/rooms/{property} -> *returns all rooms that belong to a specific property*
 
-POST /api/room - Create a new room for a property.
+POST: /api/rooms -> *creates a new room*
 
-GET /api/room/{propertyId} - Fetch all rooms of a specific property.
+PUT: /api/rooms/{room} -> *updates an existing room*
 
-PUT /api/room/{id} - Edit a specific room.
+DELETE: /api/rooms/{room} -> *deletes a room*
 
-DELETE /api/room/{id} - Delete a specific room.
+### Frontend Requirements
+Feel free to use your preferred JavaScript Framework (you can also use Inertia if you'd like).
 
-## Frontend:
-1. React Setup:
+#### Properties
+- Create a view that lists all available properties.
+- Create a form that allows you to add or edit a property.
 
-Please feel free to use inertia if needed
+#### Rooms
+- On selecting a property, create a view that lists all available rooms for that property.
+- Create a form that allows you to add or edit a room.
 
-2. Property Management:
-
-**List View:** <br> 
-Display all properties with options to edit or delete.
-
-**Form:** <br>
-For adding/editing a property. Fields: name, address.
-
-3. Room Management:
-
-**Dropdown/Selector:** <br>
-Allow the user to select a property.
-
-**List View:** <br> 
-Based on the selected property, display its rooms with options to edit or delete.
-
-**Form:** <br> 
-For adding/editing a room within the selected property. Fields: name, size.
-
-**Bonus Points** <br>
-- tests
-- Using typescript
+### Bonus
+- API request validation.
+- Use of interfaces.
+- Use of service classes.
+- Use of repository classes.
